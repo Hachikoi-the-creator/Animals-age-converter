@@ -1,0 +1,139 @@
+// Basic resets
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Basic layout
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(34, 145, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 145, 195, 1) 0%,
+    rgba(233, 45, 253, 1) 100%
+  );
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+}
+
+// Input/Output layout
+.human-input,
+.animal-output {
+  font-size: 1.5rem;
+}
+.human-input {
+  margin-top: 30vh;
+
+  input {
+    font-size: 1.2rem;
+    width: 7ch;
+    text-align: center;
+    background-color: #fefefe4a;
+    border: none;
+  }
+
+  // mozilla
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 10px;
+  }
+
+  // chrome
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: block;
+    width: 60%;
+    margin: 13px 20%;
+    background-color: plum;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 21px;
+
+    &:hover {
+      background-color: rgb(197, 66, 197);
+    }
+
+    &:active {
+      color: #fefefe;
+      background-color: rgb(148, 8, 148);
+    }
+  }
+}
+
+.animal-output > * {
+  margin: 7px 0;
+}
+
+// Images
+.images {
+  > * {
+    position: absolute;
+    top: 0;
+  }
+
+  .dog,
+  .cat {
+    width: 80px;
+    top: 43vh;
+  }
+
+  .dog {
+    left: -10px;
+    width: 269px;
+  }
+
+  .cat {
+    left: 80vw;
+    width: 120px;
+  }
+
+  .think {
+    top: 32px;
+    left: 43vw;
+  }
+}
+
+// Footer
+.footer {
+  a {
+    color: white;
+    display: inline-block;
+    padding: 3px 7px;
+    background-color: rgba(0, 0, 0, 0.289);
+    text-decoration: none;
+    border-radius: 7px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.464);
+    }
+  }
+
+  > * {
+    margin: 13px;
+  }
+
+  text-align: center;
+}
