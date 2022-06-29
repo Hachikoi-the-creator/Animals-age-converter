@@ -137,3 +137,33 @@ body {
 
   text-align: center;
 }
+
+@media screen and (max-width: 700px) {
+  .images {
+    .dog {
+      left: -45px;
+      top: 58vh;
+      width: 225px;
+    }
+    .cat {
+      left: 64vw;
+      top: 57vh;
+    }
+  }
+
+  .footer {
+    margin-top: 40px;
+    > * {
+      margin: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .human-input {
+    input {
+      display: block;
+      margin: 0 40vw !important;
+    }
+  }
+}
